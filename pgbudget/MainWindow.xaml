@@ -1,0 +1,9 @@
+﻿<Window x:Class="pgbudget.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Menu Height="26" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="491" IsMainMenu="True" Focusable="True"></Menu>
+        <Button Content="Button" Height="21" HorizontalAlignment="Left" Margin="12,43,0,0" Name="button1" VerticalAlignment="Top" Width="158" Click="button1_Click" />
+    </Grid>
+</Window>
