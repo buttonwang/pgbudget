@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("pgbudget")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Sky123.Org")]
+[assembly: AssemblyCompany("山西地方电力有限公司")]
 [assembly: AssemblyProduct("pgbudget")]
-[assembly: AssemblyCopyright("Copyright © Sky123.Org 2012")]
+[assembly: AssemblyCopyright("Copyright © sxdfdl.com  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="pgbudget" Class="PGDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=pgbudget;Integrated Security=True" SettingsObjectName="pgbudget.Properties.Settings" SettingsPropertyName="pgbudgetConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.project" Member="projects">
+    <Type Name="project">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="工程名称" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="工程编号" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="工程地址" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="合同编号" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="图纸编号" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="建设单位" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="编制单位" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="编制人" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="编制日期" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="设计单位" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="设计单位负责人" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="施工单位" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="施工单位负责人" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="审核单位" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="审核单位负责人" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="复核日期" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="招标人" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="投标人" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="投标人备注" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="地形" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="施工地点" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="地区分类" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="运输距离" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="变压器安装方式" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="人工费调整" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="其他费用" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="建筑工程材机费" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="人工运距" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="汽车运距" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="土质" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="备注" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="创建日期" AutoSync="Never" Type="System.DateTime" DbType="datetime" IsDbGenerated="true" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.desyb" Member="desybs">
+    <Type Name="desyb">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="syID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NodeId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BTM" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NOTE" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.drb" Member="drbs">
+    <Type Name="drb">
+      <Column Name="ID" Type="System.Int32" DbType="Int" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="true" />
+      <Column Name="deh" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="zj" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="sybh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mc" Type="System.String" DbType="NVarChar(160)" CanBeNull="true" />
+      <Column Name="dw" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="dergf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="declf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dejxf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ylglf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="elglf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="slglf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="nrid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FACTOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JBDW" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ZMLB" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FYWJ" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.project_drawing" Member="project_drawings">
+    <Type Name="project_drawing">
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="drawing_content" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="drawing_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
