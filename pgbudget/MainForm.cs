@@ -55,7 +55,7 @@ namespace pgbudget
 
         private void 定额维护ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DictForm deForm = new DictForm();
+            DictForm deForm = new DictForm("定额");
             try
             {
                 deForm.ShowDialog();
@@ -67,6 +67,61 @@ namespace pgbudget
             }
         }
 
+        private void 材机维护ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DictForm cjForm = new DictForm("材机");
+            try
+            {
+                cjForm.ShowDialog();
+            }
+            finally
+            {
+                if (cjForm != null)
+                    cjForm.Dispose();
+            }
+        }
+
+        private void 设备维护ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DictForm sbForm = new DictForm("设备");
+            try
+            {
+                sbForm.ShowDialog();
+            }
+            finally
+            {
+                if (sbForm != null)
+                    sbForm.Dispose();
+            }
+        }
+
+        private void 装材维护ToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            DictForm zcForm = new DictForm("装材");
+            try
+            {
+                zcForm.ShowDialog();
+            }
+            finally
+            {
+                if (zcForm != null)
+                    zcForm.Dispose();
+            }
+        }
+
+        private void 组件库维护ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ZJKForm zjkForm = new ZJKForm();
+            try
+            {
+                zjkForm.ShowDialog();
+            }
+            finally
+            {
+                if (zjkForm != null)
+                    zjkForm.Dispose();
+            }
+        }
        
     }
 }

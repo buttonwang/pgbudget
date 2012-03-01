@@ -39,21 +39,19 @@
             this.数据维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.定额维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.材机维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.装材维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设备维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.装材维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.选项ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.使用帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button1 = new System.Windows.Forms.Button();
             this.ProjectPropertyGrid = new System.Windows.Forms.PropertyGrid();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -61,28 +59,31 @@
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.组件库维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.新建NToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.打开OToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.保存SToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.打印PToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.剪切UToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.复制CToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.粘贴PToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.帮助LToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // 工程管理ToolStripMenuItem
@@ -100,7 +101,7 @@
             // 
             this.新建ToolStripMenuItem.Name = "新建ToolStripMenuItem";
             this.新建ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.新建ToolStripMenuItem.Text = "新建";            
+            this.新建ToolStripMenuItem.Text = "新建";
             // 
             // 打开ToolStripMenuItem
             // 
@@ -132,8 +133,9 @@
             this.数据维护ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.定额维护ToolStripMenuItem,
             this.材机维护ToolStripMenuItem,
+            this.设备维护ToolStripMenuItem,
             this.装材维护ToolStripMenuItem,
-            this.设备维护ToolStripMenuItem});
+            this.组件库维护ToolStripMenuItem});
             this.数据维护ToolStripMenuItem.Name = "数据维护ToolStripMenuItem";
             this.数据维护ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.数据维护ToolStripMenuItem.Text = "数据维护";
@@ -141,27 +143,30 @@
             // 定额维护ToolStripMenuItem
             // 
             this.定额维护ToolStripMenuItem.Name = "定额维护ToolStripMenuItem";
-            this.定额维护ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.定额维护ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.定额维护ToolStripMenuItem.Text = "定额维护";
             this.定额维护ToolStripMenuItem.Click += new System.EventHandler(this.定额维护ToolStripMenuItem_Click);
             // 
             // 材机维护ToolStripMenuItem
             // 
             this.材机维护ToolStripMenuItem.Name = "材机维护ToolStripMenuItem";
-            this.材机维护ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.材机维护ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.材机维护ToolStripMenuItem.Text = "材机维护";
-            // 
-            // 装材维护ToolStripMenuItem
-            // 
-            this.装材维护ToolStripMenuItem.Name = "装材维护ToolStripMenuItem";
-            this.装材维护ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.装材维护ToolStripMenuItem.Text = "装材维护";
+            this.材机维护ToolStripMenuItem.Click += new System.EventHandler(this.材机维护ToolStripMenuItem_Click);
             // 
             // 设备维护ToolStripMenuItem
             // 
             this.设备维护ToolStripMenuItem.Name = "设备维护ToolStripMenuItem";
-            this.设备维护ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.设备维护ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.设备维护ToolStripMenuItem.Text = "设备维护";
+            this.设备维护ToolStripMenuItem.Click += new System.EventHandler(this.设备维护ToolStripMenuItem_Click);
+            // 
+            // 装材维护ToolStripMenuItem
+            // 
+            this.装材维护ToolStripMenuItem.Name = "装材维护ToolStripMenuItem";
+            this.装材维护ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.装材维护ToolStripMenuItem.Text = "装材维护";
+            this.装材维护ToolStripMenuItem.Click += new System.EventHandler(this.装材维护ToolStripMenuItem_Click_1);
             // 
             // 工具ToolStripMenuItem
             // 
@@ -211,10 +216,6 @@
             this.menuStrip.Size = new System.Drawing.Size(886, 25);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
-            // 
-            // projectBindingSource
-            // 
-            this.projectBindingSource.DataSource = typeof(pgbudget.project);
             // 
             // tabControl1
             // 
@@ -280,18 +281,6 @@
             this.ProjectPropertyGrid.Name = "ProjectPropertyGrid";
             this.ProjectPropertyGrid.Size = new System.Drawing.Size(290, 431);
             this.ProjectPropertyGrid.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::pgbudget.Properties.Resources.pg;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(578, 431);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // tabPage3
             // 
@@ -372,6 +361,43 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(886, 463);
+            this.panel2.TabIndex = 3;
+            // 
+            // 组件库维护ToolStripMenuItem
+            // 
+            this.组件库维护ToolStripMenuItem.Name = "组件库维护ToolStripMenuItem";
+            this.组件库维护ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.组件库维护ToolStripMenuItem.Text = "组件库维护";
+            this.组件库维护ToolStripMenuItem.Click += new System.EventHandler(this.组件库维护ToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(578, 431);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // 新建NToolStripButton
             // 
             this.新建NToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -408,11 +434,6 @@
             this.打印PToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.打印PToolStripButton.Text = "打印(&P)";
             // 
-            // toolStripSeparator
-            // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
             // 剪切UToolStripButton
             // 
             this.剪切UToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -440,11 +461,6 @@
             this.粘贴PToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.粘贴PToolStripButton.Text = "粘贴(&P)";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
             // 帮助LToolStripButton
             // 
             this.帮助LToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -454,14 +470,9 @@
             this.帮助LToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.帮助LToolStripButton.Text = "帮助(&L)";
             // 
-            // panel2
+            // projectBindingSource
             // 
-            this.panel2.Controls.Add(this.tabControl1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(886, 463);
-            this.panel2.TabIndex = 3;
+            this.projectBindingSource.DataSource = typeof(pgbudget.project);
             // 
             // MainForm
             // 
@@ -474,21 +485,22 @@
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "山西地方电力配电网工程概预算软件";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,7 +517,6 @@
         private System.Windows.Forms.ToolStripMenuItem 数据维护ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 定额维护ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 材机维护ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 装材维护ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 设备维护ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 工具ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 选项ToolStripMenuItem;
@@ -538,6 +549,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton 帮助LToolStripButton;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStripMenuItem 装材维护ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 组件库维护ToolStripMenuItem;
 
 
     }

@@ -11,58 +11,92 @@ namespace pgbudget
 
         private Dict _dict;
 
-        public DictForm()
+        private readonly string _dictName;
+
+        private DataGridView _selectGrid;
+
+        public String  selectCode;
+
+        public String  selectName;
+
+        //1: 正常模式；2: 只读模式
+        public int mode;
+
+        public DictForm(string dictName)
         {
             InitializeComponent();
+            _dictName = dictName;
         }
 
         private void DEForm_Load(object sender, EventArgs e)
         {
-            //TreeNode topNode = new TreeNode { Text = "全部定额", Tag = 0 };
-
-            //topNode = sytreeView.TopNode;
-
-            //var desys = (from desyb in db.desybs select desyb);
-
-            //foreach (desyb sy in desys)
-            //{
-            //    Console.WriteLine(sy.BTM);
-            //    //sytreeView.
-            //}
-            _dict = new Dict("定额");
+            _dict = new Dict(_dictName);
             sytreeView.Nodes.Add(_dict.IndexTree());
             sytreeView.TopNode.Expand();
 
-            drbDataGridView.Dock = DockStyle.Fill;
-            drbDataGridView.Visible = true;
 
-            
-
-            drbBindingSource.Dispose();
-            //drbBindingSource.DataSource = _dict.DictDataSource("");
-            //dictBindingSource = (_dict.DictDataSource("") as System.Data.Linq.DataQuery<pgbudget.drb>);
-            
-            //drbDataGridView.DataSource = dictBindingSource.DataSource;
-        }
-        
-        private void desybBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            _dict.SaveDict();
+            foreach (Control ctl in gridpanel.Controls)
+            {
+                if ((ctl is DataGridView) && (ctl.Name == _dict.DictName + "DataGridView"))
+                {
+                    ctl.Dock = DockStyle.Fill;
+                    ctl.Visible = true;
+                    _selectGrid = (ctl as DataGridView);
+                    _selectGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    _selectGrid.CellDoubleClick += this.DataGridView_CellDoubleClick;
+                }
+            }
         }
 
         private void sytreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            var syId = (sytreeView.SelectedNode.Tag as IDictIndex).IndexValue??"";
-            BindingSource bs = new BindingSource();
-            bs.DataSource = _dict.DictDataSource(syId);
+            var syId = (sytreeView.SelectedNode.Tag as IDictIndex).IndexValue ?? "";           
+            BindingSource bs = new BindingSource() { DataSource = _dict.DictDataSource(syId) };
             dictBindingSource.DataSource = bs;
-            drbDataGridView.DataSource = bs;
             dictBindingNavigator.BindingSource = bs;
+            _selectGrid.DataSource = bs;
         }
 
-        private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
+        private void desybBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            dictBindingSource.MoveFirst();
+            _dict.SaveDict();
+        }        
+
+        private void DataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {           
+            selectCode = _selectGrid.CurrentRow.Cells[0].Value.ToString();
+            selectName = _selectGrid.CurrentRow.Cells[1].Value.ToString();
+            MessageBox.Show(selectCode);
         }
+
+        private void searchButton1_Click(object sender, EventArgs e)
+        {
+            var keyword = keywordTextBox.Text.Trim();
+            BindingSource bs = new BindingSource() { DataSource = _dict.SearchDataSource(keyword) };
+            dictBindingSource.DataSource = bs;
+            dictBindingNavigator.BindingSource = bs;
+            _selectGrid.DataSource = bs;
+        }
+
+        private void DictForm_Activated(object sender, EventArgs e)
+        {
+            keywordTextBox.Focus();
+        }
+
+        private void keywordTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter) && (keywordTextBox.Text.Trim() != ""))
+            {
+                searchButton1_Click(keywordTextBox, null);
+            }
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
     }
 }

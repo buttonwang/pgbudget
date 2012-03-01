@@ -46,8 +46,8 @@
       <Column Name="NOTE" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
     </Type>
   </Table>
-  <Table Name="dbo.drb" Member="drbs">
-    <Type Name="drb">
+  <Table Name="dbo.deb" Member="debs">
+    <Type Name="deb">
       <Column Name="ID" Type="System.Int32" DbType="Int" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="true" />
       <Column Name="deh" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
       <Column Name="zj" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
@@ -73,6 +73,112 @@
       <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="drawing_content" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="drawing_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.cjsyb" Member="cjsybs">
+    <Type Name="cjsyb">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="syID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NodeId" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BTM" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.cjb" Member="cjbs">
+    <Type Name="cjb">
+      <Column Name="cjid" Type="System.String" DbType="NVarChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sybh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="xhgg" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="dw" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="dedj" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="scdj" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="nbdj" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cjlb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="xs" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="sc" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="cj" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SCBH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SCXS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="upsize_ts" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sbb" Member="sbbs">
+    <Type Name="sbb">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Category" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CODE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SORTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="UNIT" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TYPE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SUBTYPE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MKTPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BGTPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ORGPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="WEIGHT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TRAFFICPER" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FACTORY" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sbsyb" Member="sbsybs">
+    <Type Name="sbsyb">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LAYER" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CODE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="REMARK" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.zcb" Member="zcbs">
+    <Type Name="zcb">
+      <Column Name="Category" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SORTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="SPEC1" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="SPEC2" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="UNIT" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TYPE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SUBTYPE" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="MKTPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BGTPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ORGPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="WEIGHT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ULLAGE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SECTIONAREA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LINEWEIGHT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ORGBGTPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ADJUSTCOE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MAKELENGTH" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.zcsyb" Member="zcsybs">
+    <Type Name="zcsyb">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LAYER" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CODE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="REMARK" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.zjk" Member="zjks">
+    <Type Name="zjk">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="created_time" AutoSync="Never" Type="System.DateTime" DbType="DateTime NOT NULL" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="zjk_zjk_item" Member="zjk_items" ThisKey="Id" OtherKey="zjk_id" Type="zjk_item" />
+    </Type>
+  </Table>
+  <Table Name="dbo.zjk_item" Member="zjk_items">
+    <Type Name="zjk_item">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="zjk_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="item_type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Item_code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Member="item_name" Type="System.String" CanBeNull="false" />
+      <Association Name="zjk_zjk_item" Member="zjk" ThisKey="zjk_id" OtherKey="Id" Type="zjk" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

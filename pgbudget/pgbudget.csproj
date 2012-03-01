@@ -103,6 +103,12 @@
     <Compile Include="DictForm.Designer.cs">
       <DependentUpon>DictForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ZJKForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZJKForm.Designer.cs">
+      <DependentUpon>ZJKForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainForm.cs">
@@ -133,6 +139,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ZJKForm.resx">
+      <DependentUpon>ZJKForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="PGDataClasses.dbml.layout">
       <DependentUpon>PGDataClasses.dbml</DependentUpon>
       <SubType>Designer</SubType>
@@ -149,9 +158,14 @@
       <LastGenOutput>PGDataClasses.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\cjb.datasource" />
+    <None Include="Properties\DataSources\deb.datasource" />
     <None Include="Properties\DataSources\desyb.datasource" />
-    <None Include="Properties\DataSources\drb.datasource" />
     <None Include="Properties\DataSources\project.datasource" />
+    <None Include="Properties\DataSources\sbb.datasource" />
+    <None Include="Properties\DataSources\zcb.datasource" />
+    <None Include="Properties\DataSources\zjk.datasource" />
+    <None Include="Properties\DataSources\zjk_item.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
