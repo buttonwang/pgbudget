@@ -3539,7 +3539,7 @@ namespace pgbudget
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id
 		{
 			get
@@ -3677,7 +3677,7 @@ namespace pgbudget
 		
 		private int _item_type;
 		
-		private string _Item_code;
+		private string _item_code;
 		
 		private string _item_name;
 		
@@ -3693,8 +3693,8 @@ namespace pgbudget
     partial void Onzjk_idChanged();
     partial void Onitem_typeChanging(int value);
     partial void Onitem_typeChanged();
-    partial void OnItem_codeChanging(string value);
-    partial void OnItem_codeChanged();
+    partial void Onitem_codeChanging(string value);
+    partial void Onitem_codeChanged();
     partial void Onitem_nameChanging(string value);
     partial void Onitem_nameChanged();
     #endregion
@@ -3705,7 +3705,7 @@ namespace pgbudget
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id
 		{
 			get
@@ -3725,7 +3725,7 @@ namespace pgbudget
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_zjk_id", DbType="Int NOT NULL")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_zjk_id", DbType="Int")]
 		public int zjk_id
 		{
 			get
@@ -3769,27 +3769,27 @@ namespace pgbudget
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Item_code", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Item_code
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_item_code", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string item_code
 		{
 			get
 			{
-				return this._Item_code;
+				return this._item_code;
 			}
 			set
 			{
-				if ((this._Item_code != value))
+				if ((this._item_code != value))
 				{
-					this.OnItem_codeChanging(value);
+					this.Onitem_codeChanging(value);
 					this.SendPropertyChanging();
-					this._Item_code = value;
-					this.SendPropertyChanged("Item_code");
-					this.OnItem_codeChanged();
+					this._item_code = value;
+					this.SendPropertyChanged("item_code");
+					this.Onitem_codeChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_item_name", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_item_name", DbType="VarChar(100)")]
 		public string item_name
 		{
 			get
@@ -3809,7 +3809,7 @@ namespace pgbudget
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="zjk_zjk_item", Storage="_zjk", ThisKey="zjk_id", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="zjk_zjk_item", Storage="_zjk", ThisKey="zjk_id", OtherKey="Id", IsForeignKey=true, DeleteRule="CASCADE", DeleteOnNull=true)]
 		public zjk zjk
 		{
 			get

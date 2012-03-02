@@ -20,12 +20,13 @@ namespace pgbudget
         public String  selectName;
 
         //1: 正常模式；2: 只读模式
-        public int mode;
+        public int mode = 1;
 
-        public DictForm(string dictName)
+        public DictForm(string dictName, int mode = 1)
         {
             InitializeComponent();
             _dictName = dictName;
+            this.mode = mode;
         }
 
         private void DEForm_Load(object sender, EventArgs e)
@@ -46,6 +47,13 @@ namespace pgbudget
                     _selectGrid.CellDoubleClick += this.DataGridView_CellDoubleClick;
                 }
             }
+
+            selectButton.Visible = (mode == 2);
+        }
+
+        private void DictForm_Activated(object sender, EventArgs e)
+        {
+            keywordTextBox.Focus();
         }
 
         private void sytreeView_AfterSelect(object sender, TreeViewEventArgs e)
@@ -60,13 +68,24 @@ namespace pgbudget
         private void desybBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             _dict.SaveDict();
-        }        
+        }
 
         private void DataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {           
+        {
+            SelectCurrentRow();
+        }
+        
+        private void selectButton_Click(object sender, EventArgs e)
+        {
+            SelectCurrentRow();
+        }
+
+        private void SelectCurrentRow()
+        {
             selectCode = _selectGrid.CurrentRow.Cells[0].Value.ToString();
             selectName = _selectGrid.CurrentRow.Cells[1].Value.ToString();
-            MessageBox.Show(selectCode);
+
+            if (mode == 2) Close();
         }
 
         private void searchButton1_Click(object sender, EventArgs e)
@@ -76,11 +95,6 @@ namespace pgbudget
             dictBindingSource.DataSource = bs;
             dictBindingNavigator.BindingSource = bs;
             _selectGrid.DataSource = bs;
-        }
-
-        private void DictForm_Activated(object sender, EventArgs e)
-        {
-            keywordTextBox.Focus();
         }
 
         private void keywordTextBox_KeyDown(object sender, KeyEventArgs e)
@@ -93,10 +107,8 @@ namespace pgbudget
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
-
-
-
+      
     }
 }

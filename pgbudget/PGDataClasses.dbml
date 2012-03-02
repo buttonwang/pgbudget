@@ -164,7 +164,7 @@
   </Table>
   <Table Name="dbo.zjk" Member="zjks">
     <Type Name="zjk">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
       <Column Name="type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="created_time" AutoSync="Never" Type="System.DateTime" DbType="DateTime NOT NULL" IsDbGenerated="true" CanBeNull="false" />
@@ -173,12 +173,12 @@
   </Table>
   <Table Name="dbo.zjk_item" Member="zjk_items">
     <Type Name="zjk_item">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="zjk_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="zjk_id" Type="System.Int32" DbType="Int" CanBeNull="false" />
       <Column Name="item_type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Item_code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Member="item_name" Type="System.String" CanBeNull="false" />
-      <Association Name="zjk_zjk_item" Member="zjk" ThisKey="zjk_id" OtherKey="Id" Type="zjk" IsForeignKey="true" />
+      <Column Name="item_code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="item_name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="zjk_zjk_item" Member="zjk" ThisKey="zjk_id" OtherKey="Id" Type="zjk" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
 </Database>
