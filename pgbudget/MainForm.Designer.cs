@@ -41,48 +41,55 @@
             this.材机维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设备维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.装材维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.组件库维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.选项ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.使用帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.MaintabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button1 = new System.Windows.Forms.Button();
             this.ProjectPropertyGrid = new System.Windows.Forms.PropertyGrid();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.treeList1 = new DevExpress.XtraTreeList.TreeList();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.组件库维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.新建NToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.打开OToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.保存SToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.打印PToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.剪切UToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.复制CToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.粘贴PToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.帮助LToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.MaintabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,6 +175,13 @@
             this.装材维护ToolStripMenuItem.Text = "装材维护";
             this.装材维护ToolStripMenuItem.Click += new System.EventHandler(this.装材维护ToolStripMenuItem_Click_1);
             // 
+            // 组件库维护ToolStripMenuItem
+            // 
+            this.组件库维护ToolStripMenuItem.Name = "组件库维护ToolStripMenuItem";
+            this.组件库维护ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.组件库维护ToolStripMenuItem.Text = "组件库维护";
+            this.组件库维护ToolStripMenuItem.Click += new System.EventHandler(this.组件库维护ToolStripMenuItem_Click);
+            // 
             // 工具ToolStripMenuItem
             // 
             this.工具ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -217,22 +231,22 @@
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
-            // tabControl1
+            // MaintabControl
             // 
-            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage10);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(886, 463);
-            this.tabControl1.TabIndex = 2;
+            this.MaintabControl.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.MaintabControl.Controls.Add(this.tabPage1);
+            this.MaintabControl.Controls.Add(this.tabPage2);
+            this.MaintabControl.Controls.Add(this.tabPage3);
+            this.MaintabControl.Controls.Add(this.tabPage4);
+            this.MaintabControl.Controls.Add(this.tabPage5);
+            this.MaintabControl.Controls.Add(this.tabPage6);
+            this.MaintabControl.Controls.Add(this.tabPage10);
+            this.MaintabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MaintabControl.Location = new System.Drawing.Point(0, 0);
+            this.MaintabControl.Name = "MaintabControl";
+            this.MaintabControl.SelectedIndex = 0;
+            this.MaintabControl.Size = new System.Drawing.Size(886, 463);
+            this.MaintabControl.TabIndex = 2;
             // 
             // tabPage1
             // 
@@ -281,6 +295,51 @@
             this.ProjectPropertyGrid.Name = "ProjectPropertyGrid";
             this.ProjectPropertyGrid.Size = new System.Drawing.Size(290, 431);
             this.ProjectPropertyGrid.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(578, 431);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.splitContainer2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(878, 437);
+            this.tabPage2.TabIndex = 7;
+            this.tabPage2.Text = "建筑工程";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.treeList1);
+            this.splitContainer2.Size = new System.Drawing.Size(872, 431);
+            this.splitContainer2.SplitterDistance = 228;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // treeList1
+            // 
+            this.treeList1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeList1.Location = new System.Drawing.Point(0, 0);
+            this.treeList1.Name = "treeList1";
+            this.treeList1.OptionsBehavior.AutoNodeHeight = false;
+            this.treeList1.Size = new System.Drawing.Size(872, 228);
+            this.treeList1.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -332,16 +391,6 @@
             this.tabPage10.Text = "设计图纸";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(878, 437);
-            this.tabPage2.TabIndex = 7;
-            this.tabPage2.Text = "建筑工程";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -360,43 +409,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(886, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripSeparator
-            // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.tabControl1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(886, 463);
-            this.panel2.TabIndex = 3;
-            // 
-            // 组件库维护ToolStripMenuItem
-            // 
-            this.组件库维护ToolStripMenuItem.Name = "组件库维护ToolStripMenuItem";
-            this.组件库维护ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.组件库维护ToolStripMenuItem.Text = "组件库维护";
-            this.组件库维护ToolStripMenuItem.Click += new System.EventHandler(this.组件库维护ToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(578, 431);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // 新建NToolStripButton
             // 
@@ -434,6 +446,11 @@
             this.打印PToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.打印PToolStripButton.Text = "打印(&P)";
             // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
             // 剪切UToolStripButton
             // 
             this.剪切UToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -461,6 +478,11 @@
             this.粘贴PToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.粘贴PToolStripButton.Text = "粘贴(&P)";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // 帮助LToolStripButton
             // 
             this.帮助LToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -469,6 +491,15 @@
             this.帮助LToolStripButton.Name = "帮助LToolStripButton";
             this.帮助LToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.帮助LToolStripButton.Text = "帮助(&L)";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.MaintabControl);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(886, 463);
+            this.panel2.TabIndex = 3;
             // 
             // projectBindingSource
             // 
@@ -490,16 +521,21 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.MaintabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -525,7 +561,7 @@
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.BindingSource projectBindingSource;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl MaintabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button button1;
@@ -536,7 +572,6 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton 新建NToolStripButton;
         private System.Windows.Forms.ToolStripButton 打开OToolStripButton;
@@ -551,6 +586,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripMenuItem 装材维护ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 组件库维护ToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private DevExpress.XtraTreeList.TreeList treeList1;
 
 
     }

@@ -34,7 +34,7 @@
       <Column Name="汽车运距" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Column Name="土质" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="备注" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="创建日期" AutoSync="Never" Type="System.DateTime" DbType="datetime" IsDbGenerated="true" CanBeNull="true" />
+      <Column Name="创建日期" AutoSync="OnUpdate" Type="System.DateTime" DbType="datetime" IsDbGenerated="true" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.desyb" Member="desybs">
@@ -179,6 +179,62 @@
       <Column Name="item_code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="item_name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Association Name="zjk_zjk_item" Member="zjk" ThisKey="zjk_id" OtherKey="Id" Type="zjk" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.jzgc" Member="jzgcs">
+    <Type Name="jzgc">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="noid" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="gcbh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="mc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="gclb" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="dek" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="defile" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="zj" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="zb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dw" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="zjf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="rgf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="clf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="jxf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="glf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="zcf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="sbf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="jcf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="jsf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="jsdw" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="jsdd" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sgdw" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bzr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="jksb" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sbfl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="jksbf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="bz" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="rows" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="zjbl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bl1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bl2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="hsb" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bg0" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bg10" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bg2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="qtb1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="qtb2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="qtb3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="qtb4" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bg6" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bg9" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bg8" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="taset" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bgset" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bgset1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="qtset" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="jfset" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ybset" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bbset" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="zjset" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

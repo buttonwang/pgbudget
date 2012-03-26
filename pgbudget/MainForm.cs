@@ -18,9 +18,18 @@ namespace pgbudget
         public MainForm()
         {
             InitializeComponent();
+            
+            InitProject();
+
+            InitJZGC();
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void InitProject()
         {
             p = (from project in db.projects
                  where project.id == 5
@@ -31,6 +40,16 @@ namespace pgbudget
                 db.projects.InsertOnSubmit(p);
             }
             ProjectPropertyGrid.SelectedObject = p;
+        }
+
+        private void InitJZGC()
+        {
+            var jzgcList = from jzgc in db.jzgcs                 
+                 select new {mc=jzgc.mc, mc2=jzgc.dw, ID=jzgc.id, ParentID = jzgc.pid};
+
+            treeList1.ParentFieldName = "ParentID"; 
+            treeList1.DataSource = jzgcList;
+            treeList1.ExpandAll();
         }
 
         private void button1_Click(object sender, EventArgs e)
