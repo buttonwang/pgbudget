@@ -81,10 +81,10 @@
         <classShapeMoniker Id="791f95e1-b66b-4adc-a106-c3bafc78f332" />
       </nodes>
     </associationConnector>
-    <classShape Id="88a1c898-2c05-44e8-b2ef-65991aa3fc3b" isExpanded="false" absoluteBounds="2.875, 1.125, 2.125, 0.45">
+    <classShape Id="88a1c898-2c05-44e8-b2ef-65991aa3fc3b" isExpanded="false" absoluteBounds="2.875, 1.25, 2.125, 0.45">
       <DataClassMoniker Name="/PGDataClassesDataContext/jzgc" />
       <nestedChildShapes>
-        <elementListCompartment Id="08bfaa25-f944-4fea-98f9-4085b87b57a0" absoluteBounds="2.89, 1.585, 1.9700000000000002, 10.180491129557291" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="08bfaa25-f944-4fea-98f9-4085b87b57a0" absoluteBounds="2.89, 1.71, 1.9700000000000002, 10.180491129557291" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
