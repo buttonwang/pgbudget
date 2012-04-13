@@ -75,6 +75,7 @@
             this.帮助LToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.表达式引擎ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.MaintabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -185,7 +186,8 @@
             // 工具ToolStripMenuItem
             // 
             this.工具ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.选项ToolStripMenuItem});
+            this.选项ToolStripMenuItem,
+            this.表达式引擎ToolStripMenuItem});
             this.工具ToolStripMenuItem.Name = "工具ToolStripMenuItem";
             this.工具ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.工具ToolStripMenuItem.Text = "工具";
@@ -193,7 +195,7 @@
             // 选项ToolStripMenuItem
             // 
             this.选项ToolStripMenuItem.Name = "选项ToolStripMenuItem";
-            this.选项ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.选项ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.选项ToolStripMenuItem.Text = "选项";
             // 
             // 帮助ToolStripMenuItem
@@ -505,6 +507,13 @@
             // 
             this.projectBindingSource.DataSource = typeof(pgbudget.project);
             // 
+            // 表达式引擎ToolStripMenuItem
+            // 
+            this.表达式引擎ToolStripMenuItem.Name = "表达式引擎ToolStripMenuItem";
+            this.表达式引擎ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.表达式引擎ToolStripMenuItem.Text = "表达式引擎";
+            this.表达式引擎ToolStripMenuItem.Click += new System.EventHandler(this.表达式引擎ToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -589,6 +598,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private DevExpress.XtraTreeList.TreeList treeList1;
+        private System.Windows.Forms.ToolStripMenuItem 表达式引擎ToolStripMenuItem;
 
 
     }

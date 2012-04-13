@@ -98,7 +98,7 @@
             // panel1
             // 
             this.panel1.AllowDrop = true;
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.closebutton);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -235,7 +235,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel6.BackColor = System.Drawing.SystemColors.Control;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.button7);
             this.panel6.Controls.Add(this.button8);
@@ -342,7 +342,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel5.BackColor = System.Drawing.SystemColors.Control;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.button6);
             this.panel5.Controls.Add(this.button5);
@@ -449,7 +449,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel7.BackColor = System.Drawing.SystemColors.Control;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.button9);
             this.panel7.Controls.Add(this.button10);

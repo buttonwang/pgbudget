@@ -116,7 +116,6 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.keywordTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.searchButton = new System.Windows.Forms.ToolStripButton();
-            this.selectButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -129,6 +128,7 @@
             this.desybBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.selectButton = new System.Windows.Forms.ToolStripButton();
             this.closeButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -168,10 +168,10 @@
             // 
             // sytreeView
             // 
-            this.sytreeView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sytreeView.Location = new System.Drawing.Point(0, 0);
+            this.sytreeView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.sytreeView.Location = new System.Drawing.Point(0, 39);
             this.sytreeView.Name = "sytreeView";
-            this.sytreeView.Size = new System.Drawing.Size(200, 508);
+            this.sytreeView.Size = new System.Drawing.Size(200, 469);
             this.sytreeView.TabIndex = 0;
             this.sytreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.sytreeView_AfterSelect);
             // 
@@ -845,17 +845,6 @@
             this.searchButton.Text = "查询";
             this.searchButton.Click += new System.EventHandler(this.searchButton1_Click);
             // 
-            // selectButton
-            // 
-            this.selectButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.selectButton.Image = ((System.Drawing.Image)(resources.GetObject("selectButton.Image")));
-            this.selectButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.selectButton.Name = "selectButton";
-            this.selectButton.Size = new System.Drawing.Size(72, 22);
-            this.selectButton.Text = "选择当前行";
-            this.selectButton.Visible = false;
-            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -939,6 +928,17 @@
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // selectButton
+            // 
+            this.selectButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.selectButton.Image = ((System.Drawing.Image)(resources.GetObject("selectButton.Image")));
+            this.selectButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.selectButton.Name = "selectButton";
+            this.selectButton.Size = new System.Drawing.Size(72, 22);
+            this.selectButton.Text = "选择当前行";
+            this.selectButton.Visible = false;
+            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
             // 
             // closeButton
             // 

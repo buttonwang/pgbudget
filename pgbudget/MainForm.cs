@@ -141,6 +141,15 @@ namespace pgbudget
                     zjkForm.Dispose();
             }
         }
+
+        private void 表达式引擎ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FleeForm fleeForm = new FleeForm())
+            {
+                fleeForm.ShowDialog();
+            }
+            
+        }
        
     }
 }
